@@ -1,0 +1,37 @@
+{
+    // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+    // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+    // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "user assign",
+            "type": "python",
+            "request": "launch",
+            "program": "src/assign.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["--user-input-json", "input.json"]
+        },
+
+        {
+            "name": "pkl assign",
+            "type": "python",
+            "request": "launch",
+            "program": "src/assign.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["--cost-constraint-matrices", "1_16_2_False_4_False_1718812764.pkl"]
+        },
+
+        {
+            "name": "train",
+            "type": "python",
+            "request": "launch",
+            "program": "src/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+        }
+    ]
+}

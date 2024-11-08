@@ -1,0 +1,8 @@
+asyncua==1.1.5
+torch==2.3.1
+numpy==2.0.0
+pytz==2024.1
+matplotlib==3.9.0
+pandas==2.2.2
+pydantic==2.7.4
+returns==0.23.0

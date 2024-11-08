@@ -1,0 +1,11 @@
+{
+    "assign_params" : {
+        "result_output_path": "./assigns/",
+        "use_cuda": true,
+        "cuda_device_num": 0,
+        "model_load": {
+            "path": "models/20240619_203202_train_jsp_mixed_resources",
+            "epoch": 100
+        }
+    }
+}

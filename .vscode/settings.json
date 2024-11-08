@@ -1,0 +1,41 @@
+{
+    "python.analysis.extraPaths": [
+        "./POMO"
+    ],
+    "files.autoSave": "afterDelay",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.typeCheckingMode": "standard",
+    "python.analysis.autoImportCompletions": true,
+    "cSpell.words": [
+        "arange",
+        "argmax",
+        "asyncua",
+        "CUDA",
+        "dtype",
+        "figsize",
+        "fontsize",
+        "hsplit",
+        "keepdim",
+        "keepdims",
+        "logit",
+        "multinomial",
+        "ninf",
+        "optim",
+        "pomo",
+        "probs",
+        "pydantic",
+        "pyenv",
+        "pytz",
+        "relu",
+        "rollouts",
+        "savetxt",
+        "softmax",
+        "subtensor",
+        "swapaxes",
+        "uamethod",
+        "unsqueeze",
+        "venv",
+        "xlim",
+        "ylim"
+    ]
+}

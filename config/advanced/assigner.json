@@ -1,0 +1,11 @@
+{
+    "assign_params" : {
+        "result_output_path": "./assigns/",
+        "load_data_from_file": true,
+        "debug_mode": false,
+        "epoch": 100,
+        "batch_size": 16,
+        "aug_factor": 8,
+        "mixed_problem_size_testing" : true
+    }
+}

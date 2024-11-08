@@ -1,0 +1,63 @@
+{
+    "env_params": {
+        "num_resources": 10,
+        "num_tasks": 50,
+        "load_data_from_file": false,
+        "use_cost_constraint_matrices": true,
+        "scores_save_path": "./internal/jsp_scores_5_10_seed1234.txt"
+    },
+    "model_params": {
+        "embedding_dim": 128,
+        "encoder_layer_num": 3,
+        "qkv_dim": 16,
+        "head_num": 8,
+        "logit_clipping": 10,
+        "ff_hidden_dim": 512,
+        "eval_type": "argmax"
+    },
+    "optimizer_params": {
+        "optimizer": {
+            "lr": 1e-05,
+            "weight_decay": 1e-06
+        },
+        "scheduler": {
+            "milestones": [
+                501
+            ],
+            "gamma": 0.1
+        }
+    },
+    "trainer_params": {
+        "debug_mode": false,
+        "cuda_device_num": 0,
+        "mixed_resource_num": true,
+        "mixed_task_num": true,
+        "epochs": 100,
+        "number_of_batches": 2000,
+        "batch_size": 16,
+        "train_batch_size": 16,
+        "logging": {
+            "model_save_interval": 10,
+            "img_save_interval": 10,
+            "log_image_params_1": {
+                "json_foldername": "log_image_style",
+                "filename": "style_jsp.json"
+            },
+            "log_image_params_2": {
+                "json_foldername": "log_image_style",
+                "filename": "style_loss_1.json"
+            }
+        },
+        "model_load": {
+            "enable": false
+        },
+        "logger_params": {
+            "log_file": {
+                "desc": "train_jsp",
+                "filename": "logs/run_log"
+            }
+        },
+        "use_cuda": true,
+        "train_episodes": 32000
+    }
+}

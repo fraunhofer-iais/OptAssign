@@ -1,0 +1,52 @@
+{
+    "resources": [
+        "resourceA",
+        "resourceB"
+    ],
+    "tasks": [
+        {
+            "name": "task1",
+            "constraints": [
+                {
+                    "resource": "resourceA",
+                    "cost": 0.4
+                },
+                {
+                    "resource": "resourceB",
+                    "cost": 0.8
+                }
+            ]
+        },
+        {
+            "name": "task2",
+            "constraints": [
+                {
+                    "resource": "resourceA",
+                    "cost": 0.8
+                },
+                {
+                    "resource": "resourceB",
+                    "cost": 0.4
+                }
+            ]
+        },
+        {
+            "name": "task3",
+            "constraints": [
+                {
+                    "resource": "resourceA",
+                    "cost": 0.4
+                }
+            ]
+        },
+        {
+            "name": "task4",
+            "constraints": [
+                {
+                    "resource": "resourceB",
+                    "cost": 0.4
+                }
+            ]
+        }
+    ]
+}

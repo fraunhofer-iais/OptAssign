@@ -1,0 +1,9 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "activate_env_sgpp",
+        "command": "conda", // Could be any other shell command
+        "args": ["activate", "sgpp"],
+        "type": "shell"
+    }]
+}

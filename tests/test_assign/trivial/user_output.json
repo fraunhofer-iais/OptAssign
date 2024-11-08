@@ -1,0 +1,37 @@
+{
+    "type": "SUCCESS",
+    "msg": "",
+    "result": {
+        "max_cost": 1.2,
+        "allocations": [
+            {
+                "resource": "resourceB",
+                "tasks": [
+                    "task1"
+                ],
+                "cost": 0.8
+            },
+            {
+                "resource": "resourceA",
+                "tasks": [
+                    "task2"
+                ],
+                "cost": 0.8
+            },
+            {
+                "resource": "resourceA",
+                "tasks": [
+                    "task3"
+                ],
+                "cost": 0.4
+            },
+            {
+                "resource": "resourceB",
+                "tasks": [
+                    "task4"
+                ],
+                "cost": 0.4
+            }
+        ]
+    }
+}
