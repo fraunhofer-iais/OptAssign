@@ -21,7 +21,7 @@ jobs:
               run: uv venv
 
             - name: Install dependencies
-              run: uv pip install -r requirements_intel_cuda.txt
+              run: uv pip install -r requirements_intel_cpu.txt
 
             - name: Run tests
               run: uv run pytest
