@@ -18,7 +18,7 @@ from exceptions import *
 from io_models import CostConstraintMatrix, IncorrectInput, UserInput, UserOutput
 from utils.logging import LogFile, create_logger, process_start_time
 from utils.types import CostConstraintMatricesPath, UserInputPath
-from utils.utils import random_string
+from utils.utils import cuda_else_cpu, random_string
 
 logger_params = {"log_file": LogFile(desc="assign")}
 
@@ -205,8 +205,8 @@ def load_cost_constraint_matrices(
         return Success(
             [
                 CostConstraintMatrix(
-                    input[i][0].cuda(),
-                    input[i][1].cuda(),
+                    cuda_else_cpu(input[i][0]),
+                    cuda_else_cpu(input[i][1]),
                 )
                 for i in range(len(input))
             ]

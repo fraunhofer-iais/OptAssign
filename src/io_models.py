@@ -6,6 +6,8 @@ from pydantic import BaseModel
 from returns.result import Failure, Result, Success
 from torch import Tensor
 
+from utils.utils import cuda_else_cpu
+
 class IncorrectInput(Exception):
     
     __slots__ = ("message", "input")
@@ -64,7 +66,7 @@ class UserInput(BaseModel):
         problem_size = num_resources * num_tasks
         batch_size = 1
 
-        cost_matrix = torch.zeros(batch_size, problem_size, 3).cuda()
+        cost_matrix = cuda_else_cpu(torch.zeros(batch_size, problem_size, 3))
         for i, resource in enumerate(self.resources):
             for j, task in enumerate(self.tasks):
                 cost = next(
@@ -74,7 +76,9 @@ class UserInput(BaseModel):
                 cost_matrix[0, i * num_tasks + j, 1] = i
                 cost_matrix[0, i * num_tasks + j, 2] = j
 
-        constraint_matrix = torch.zeros(batch_size, num_tasks, num_resources).cuda()
+        constraint_matrix = cuda_else_cpu(
+            torch.zeros(batch_size, num_tasks, num_resources)
+        )
 
         for i, task in enumerate(self.tasks):
             for constraint in task.constraints:
